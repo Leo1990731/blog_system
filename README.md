@@ -26,28 +26,31 @@ DATABASES = {
 
 * 创建数据库
 
+```
+# 登陆数据库
+>mysql -uroot -ppassword  --default-character-set=utf8
+
+# 创建数据库
+>CREATE DATABASE blog_db;
+```
+
+* 数据库迁移
+
 ```python3
- # 登陆数据库
- >mysql -uroot -ppassword  --default-character-set=utf8
+# 执行迁移
+python manage.py makemigrations
+python manage.py migrate
+```
 
- # 创建数据库
- >CREATE DATABASE blog_db;
- ```
-
- * 数据库迁移
- ```python3
- # 执行迁移
- python manage.py makemigrations
- python manage.py migrate
-
- # 导入数据
- >use blog_db;
- >set names utf8;
- >source your\path\blog_db.sql (你的blog_db.msyql文件所在位置)
+* 导入数据
+```
+>use blog_db;
+>set names utf8;
+>source your\path\blog_db.sql (你的blog_db.sql文件所在位置);
 ```
 
 * 导出数据库
-```python3
+```
 mysqldump -uroot -p  --default-character-set=utf8  blog_db > blog_db.sql
 ```
 
