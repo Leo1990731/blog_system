@@ -33,4 +33,3 @@ query: query模块(ajax请求)
         /query/add_comment  --> 请求增加评论
         /query/comment_list --> 请求所有评论数据
         /query/article_attrs/2 --> 请求某一篇文章的属性数据
-

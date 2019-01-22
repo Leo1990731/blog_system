@@ -4,39 +4,24 @@ useradmin目录用于处理用户个人后台管理操作，主要的功能函�
 # 后台管理首页
 @login_required
 def useradmin(request):
-    '''
     用户个人博客后台文章管理首页
     管理首页提供了进一步操作和处理的各类接口和链接
-
-    :param request:
-    :return:
-    '''
 
 
 # 查看文章
 @login_required
 def show_articles(request):
-    '''
     查看用户文章信息
-
-    :param request:
-    :return:
-    '''
 
 
 # 增加文章
 @login_required
 def add_article(request):
-    '''
     用户增加文章视图函数
     此函数的主要功能有如下几项：
     1、负责提供空白表单用于用户增加文章数据
     2、负责接收用户提交的文章数据，并校验数据合法性
     3、对合法的文章数据加入数据库
-
-    :param request:
-    :return:
-    '''
 
 
 # 编辑文章
@@ -48,13 +33,7 @@ def edit_article(request, nid):
 # 删除文章
 @login_required
 def delete_article(request, nid):
-    '''
     文章删除视图函数,此函数是真实的删除文章数据，不可恢复
-
-    :param request:
-    :param nid:
-    :return:
-    '''
 
 
 # 查看分类
@@ -81,9 +60,5 @@ def delete_category(request, nid):
 # 编辑个人详情
 @login_required
 def edit_profile(request):
-    '''
     用户个人详情数据修改
 
-    :param request:
-    :return:
-    '''
